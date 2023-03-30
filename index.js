@@ -36,3 +36,5 @@ dropdownToggle2.addEventListener("mouseout", () => {
     "invert(98%) sepia(3%) saturate(0%) hue-rotate(83deg) brightness(115%) contrast(92%)";
   dropdownToggle2.lastElementChild.style.color = "rgb(245, 245, 245)";
 });
+
+//code 3 - Image Slider
