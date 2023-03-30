@@ -38,3 +38,60 @@ dropdownToggle2.addEventListener("mouseout", () => {
 });
 
 //code 3 - Image Slider
+const leftArrow = document.getElementsByClassName("left-arrow")[0];
+const rightArrow = document.getElementsByClassName("right-arrow")[0];
+const catImages = document.querySelectorAll(".image");
+
+leftArrow.addEventListener("click", () => {
+  for (let i = 0; i < catImages.length; i++) {
+    if (catImages[i].style.display === "block") {
+      catImages[i].style.display = "none";
+      if (i == 0) {
+        catImages[4].style.display = "block";
+      } else {
+        catImages[i - 1].style.display = "block";
+      }
+      break;
+    }
+  }
+});
+rightArrow.addEventListener("click", () => {
+  for (let i = 0; i < catImages.length; i++) {
+    if (catImages[i].style.display === "block") {
+      catImages[i].style.display = "none";
+      if (i == 4) {
+        catImages[0].style.display = "block";
+      } else {
+        catImages[i + 1].style.display = "block";
+      }
+      break;
+    }
+  }
+});
+
+const circles = document.querySelectorAll(".select-circle");
+
+for (let i = 0; i < circles.length; i++) {
+  circles[i].addEventListener("click", () => {
+    for (image of catImages) {
+      image.style.display = "none";
+    }
+    catImages[i].style.display = "block";
+  });
+}
+
+function advanceSlide() {
+  for (let i = 0; i < catImages.length; i++) {
+    if (catImages[i].style.display === "block") {
+      catImages[i].style.display = "none";
+      if (i == 4) {
+        catImages[0].style.display = "block";
+      } else {
+        catImages[i + 1].style.display = "block";
+      }
+      break;
+    }
+  }
+}
+
+setInterval(advanceSlide, 5000);
