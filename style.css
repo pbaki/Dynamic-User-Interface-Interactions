@@ -136,11 +136,22 @@ p {
   justify-content: space-evenly;
   gap: 30px;
 }
-.left-slider {
+
+.left-arrow,
+.right-arrow {
   border: 10px solid black;
+  border-width: 20px 0 20px 30px;
+  border-color: transparent transparent transparent rgb(58, 58, 58);
+  border-radius: 5px;
 }
-.right-slider {
-  border: 10px solid black;
+.left-arrow {
+  transform: rotate(180deg);
+}
+.left-arrow:hover {
+  border-color: transparent transparent transparent rgb(129, 129, 129);
+}
+.right-arrow:hover {
+  border-color: transparent transparent transparent rgb(129, 129, 129);
 }
 .select-image-circles {
   display: flex;
@@ -149,9 +160,12 @@ p {
   gap: 20px;
 }
 .select-circle {
-  border: 10px solid black;
+  border: 10px solid rgb(129, 129, 129);
+  border-radius: 100%;
 }
-
+.select-circle:hover {
+  border-color: rgb(58, 58, 58);
+}
 .image {
   width: 200px;
   height: 200px;
@@ -159,4 +173,10 @@ p {
   border-radius: 20px;
   object-fit: cover;
   object-position: 50% 50%;
+}
+.cat1,
+.cat2,
+.cat4,
+.cat5 {
+  display: none;
 }
