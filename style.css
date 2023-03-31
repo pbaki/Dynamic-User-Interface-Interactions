@@ -134,7 +134,7 @@ p {
   display: flex;
   align-items: center;
   justify-content: space-evenly;
-  gap: 30px;
+  gap: 20px;
 }
 
 .left-arrow,
@@ -166,6 +166,11 @@ p {
 .select-circle:hover {
   border-color: rgb(58, 58, 58);
 }
+.images {
+  position: relative;
+  width: 200px;
+  height: 200px;
+}
 .image {
   width: 200px;
   height: 200px;
@@ -173,4 +178,7 @@ p {
   border-radius: 20px;
   object-fit: cover;
   object-position: 50% 50%;
+  position: absolute;
+  opacity: 0;
+  transition: opacity 1s ease;
 }
